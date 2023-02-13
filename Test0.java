@@ -1,18 +1,17 @@
-package Exception;
-
-import java.util.Scanner;
-
+import java.io.File;
 public class Test0 {
+    //create new file
     public static void main(String[] args) {
-        Scanner sc=new Scanner(System.in);
+       File f=new File("C:\\CipherSchoolAssignments\\week2-Assignments\\FindHandling\\testFile.txt");
 
-        System.out.println("Hey buddy how old are you ?");
-
-        int age=sc.nextInt();
-        System.out.println("You have really grown up!");
-
-        //checked exception are checkedd at compile time,eg:IOexception
-        //unchecked exception are checked at runtime eg:InputMismatched Exception
+       try
+       {
+        f.createNewFile();
+       }
+       catch(Exception e)
+       {
+        e.printStackTrace();
+       }
+       System.out.println("File created successfully ");
     }
-    
 }
